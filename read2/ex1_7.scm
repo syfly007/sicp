@@ -7,7 +7,9 @@
       guess
       (sqrt-iter (improve guess x) x)))
 (define (good-enough? guess x)
-  (< (abs (- guess (improve guess x))) (* guess 0.00001)))
+  (< 
+    (abs (- guess (improve guess x))) 
+    (* guess 0.00001)))
 (define (improve guess x)
   (average (/ x guess) guess))
 (define (average x y)
